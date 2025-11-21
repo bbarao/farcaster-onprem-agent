@@ -74,7 +74,6 @@ RUN set -eux \
        iptables \
        iproute2 \
        dnsmasq \
-       dnsutils \
        wireguard-tools \
        ca-certificates \
        ipcalc \

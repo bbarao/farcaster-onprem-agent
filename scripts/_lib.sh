@@ -131,7 +131,7 @@ resolve_host() {
 		return 0
 	fi
 	# Resolve via DNS.
-	resolved=$(dig a +short "${host}" | head -1)
+	resolved=$(getent ahosts "${host}" | awk 'NR==1 {print $1}')
 	if [ -z "${resolved}" ]; then
 		return 1
 	fi
